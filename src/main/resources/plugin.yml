@@ -1,3 +1,4 @@
 name: DeltaCore
 version: ${project.version}
 main: club.deltapvp.deltacore.DeltaCore
+description: The DeltaDevelopment core.
