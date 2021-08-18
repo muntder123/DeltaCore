@@ -1,9 +1,13 @@
 package club.deltapvp.deltacore.impl.version;
 
+import club.deltapvp.deltacore.api.registry.Registry;
+import club.deltapvp.deltacore.api.registry.RegistryPriority;
+import club.deltapvp.deltacore.api.registry.RegistryType;
 import club.deltapvp.deltacore.api.utilities.version.ServerVersion;
 import club.deltapvp.deltacore.api.utilities.version.VersionChecker;
 import org.bukkit.Bukkit;
 
+@Registry(type = RegistryType.IMPLEMENTATION, priority = RegistryPriority.HIGHEST)
 public class VersionCheckerImpl extends VersionChecker {
 
     private final ServerVersion serverVersion;

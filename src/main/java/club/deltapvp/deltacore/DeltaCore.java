@@ -1,11 +1,10 @@
 package club.deltapvp.deltacore;
 
-import club.deltapvp.deltacore.impl.APIInitializer;
+import club.deltapvp.deltacore.api.DeltaPlugin;
 import lombok.Getter;
 import lombok.Setter;
-import org.bukkit.plugin.java.JavaPlugin;
 
-public final class DeltaCore extends JavaPlugin {
+public final class DeltaCore extends DeltaPlugin {
 
     @Getter
     @Setter
@@ -15,8 +14,6 @@ public final class DeltaCore extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         setInstance(this);
-
-        new APIInitializer();
     }
 
     @Override
