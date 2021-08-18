@@ -2,8 +2,6 @@ package club.deltapvp.deltacore.impl.bungeecordutil;
 
 import club.deltapvp.deltacore.DeltaCore;
 import club.deltapvp.deltacore.api.bungeecord.BungeecordUtil;
-import club.deltapvp.deltacore.api.registry.Registry;
-import club.deltapvp.deltacore.api.registry.RegistryType;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.messaging.PluginMessageListener;
@@ -12,9 +10,9 @@ import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
-@Registry(type = RegistryType.IMPLEMENTATION)
 public class BungeecordUtilImpl extends BungeecordUtil implements PluginMessageListener {
     private final DeltaCore plugin;
+
     public BungeecordUtilImpl() {
         setInstance(this);
         plugin = DeltaCore.getInstance();

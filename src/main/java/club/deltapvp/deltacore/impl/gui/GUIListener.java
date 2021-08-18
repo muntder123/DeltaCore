@@ -1,11 +1,6 @@
 package club.deltapvp.deltacore.impl.gui;
 
-import club.deltapvp.deltacore.DeltaCore;
 import club.deltapvp.deltacore.api.gui.BaseGUI;
-import club.deltapvp.deltacore.api.registry.Registry;
-import club.deltapvp.deltacore.api.registry.RegistryPriority;
-import club.deltapvp.deltacore.api.registry.RegistryType;
-import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -17,7 +12,6 @@ import org.bukkit.inventory.InventoryHolder;
 import java.util.HashMap;
 import java.util.function.BiConsumer;
 
-@Registry(type = RegistryType.LISTENER, priority = RegistryPriority.HIGH)
 public class GUIListener implements Listener {
 
     @EventHandler

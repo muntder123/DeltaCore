@@ -1,6 +1,8 @@
 package club.deltapvp.deltacore;
 
 import club.deltapvp.deltacore.api.DeltaPlugin;
+import club.deltapvp.deltacore.impl.APIInitializer;
+import club.deltapvp.deltacore.impl.gui.GUIListener;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,6 +16,12 @@ public final class DeltaCore extends DeltaPlugin {
     public void onEnable() {
         // Plugin startup logic
         setInstance(this);
+
+        new APIInitializer();
+        registerListeners(
+                new GUIListener()
+        );
+
     }
 
     @Override

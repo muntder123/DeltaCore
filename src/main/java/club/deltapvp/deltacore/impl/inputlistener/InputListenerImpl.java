@@ -1,11 +1,8 @@
 package club.deltapvp.deltacore.impl.inputlistener;
 
 import club.deltapvp.deltacore.DeltaCore;
-import club.deltapvp.deltacore.api.registry.Registry;
-import club.deltapvp.deltacore.api.registry.RegistryType;
 import club.deltapvp.deltacore.api.utilities.InputListener;
 import org.bukkit.Bukkit;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.EventHandler;
@@ -19,7 +16,6 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.function.BiConsumer;
 
-@Registry(type = RegistryType.LISTENER)
 public class InputListenerImpl extends InputListener implements Listener {
 
     private final Map<UUID, BiConsumer<Player, String>> listening = new HashMap<>();
