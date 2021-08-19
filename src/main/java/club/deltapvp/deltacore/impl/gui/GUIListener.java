@@ -42,6 +42,6 @@ public class GUIListener implements Listener {
             return;
 
         BaseGUI base = (BaseGUI) event.getInventory().getHolder();
-        base.onClose((Player) event.getPlayer());
+        base.onClose((Player) event.getPlayer(), event);
     }
 }

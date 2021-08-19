@@ -83,7 +83,7 @@
         <dependency>
             <groupId>com.github.Delta-Development</groupId>
             <artifactId>DeltaAPI</artifactId>
-            <version>0.7.6</version>
+            <version>0.7.8</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
