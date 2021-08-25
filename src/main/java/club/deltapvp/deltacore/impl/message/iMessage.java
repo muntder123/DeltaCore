@@ -41,10 +41,8 @@ public class iMessage implements Message {
         List<String> pendingMessages = new ArrayList<>();
         for (String msg : message.split("\n")) {
             final String[] m = {msg};
-            replacerSet.stream().filter(r -> m[0].contains(r.getInput())).forEach(r -> {
-                m[0] = m[0].replaceAll(r.getInput(), r.getOutput());
-                pendingMessages.add(m[0]);
-            });
+            replacerSet.stream().filter(r -> m[0].contains(r.getInput())).forEach(r -> m[0] = m[0].replaceAll(r.getInput(), r.getOutput()));
+            pendingMessages.add(m[0]);
         }
 
         pendingMessages.forEach(s -> commandSender.sendMessage(ChatColor.translateAlternateColorCodes('&', s)));
@@ -72,10 +70,8 @@ public class iMessage implements Message {
         List<String> pendingMessages = new ArrayList<>();
         for (String msg : message.split("\n")) {
             final String[] m = {msg};
-            replacerSet.stream().filter(r -> m[0].contains(r.getInput())).forEach(r -> {
-                m[0] = m[0].replaceAll(r.getInput(), r.getOutput());
-                pendingMessages.add(m[0]);
-            });
+            replacerSet.stream().filter(r -> m[0].contains(r.getInput())).forEach(r -> m[0] = m[0].replaceAll(r.getInput(), r.getOutput()));
+            pendingMessages.add(m[0]);
         }
 
         list.forEach(player -> pendingMessages.forEach(s -> player.sendMessage(ChatColor.translateAlternateColorCodes('&', s))));
@@ -103,10 +99,8 @@ public class iMessage implements Message {
         List<String> pendingMessages = new ArrayList<>();
         for (String msg : message.split("\n")) {
             final String[] m = {msg};
-            replacerSet.stream().filter(r -> m[0].contains(r.getInput())).forEach(r -> {
-                m[0] = m[0].replaceAll(r.getInput(), r.getOutput());
-                pendingMessages.add(m[0]);
-            });
+            replacerSet.stream().filter(r -> m[0].contains(r.getInput())).forEach(r -> m[0] = m[0].replaceAll(r.getInput(), r.getOutput()));
+            pendingMessages.add(m[0]);
         }
 
         pendingMessages.forEach(s -> Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', s)));

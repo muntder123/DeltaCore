@@ -1,6 +1,6 @@
 package club.deltapvp.deltacore.impl.update;
 
-import club.deltapvp.deltacore.api.utilities.UpdateChecker;
+import club.deltapvp.deltacore.api.utilities.checker.UpdateChecker;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 

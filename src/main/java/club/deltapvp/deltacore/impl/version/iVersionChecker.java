@@ -1,7 +1,7 @@
 package club.deltapvp.deltacore.impl.version;
 
-import club.deltapvp.deltacore.api.utilities.version.ServerVersion;
-import club.deltapvp.deltacore.api.utilities.version.VersionChecker;
+import club.deltapvp.deltacore.api.utilities.file.VersionChecker;
+import club.deltapvp.deltacore.api.utilities.file.enums.ServerVersion;
 import org.bukkit.Bukkit;
 
 public class iVersionChecker implements VersionChecker {

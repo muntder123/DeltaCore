@@ -1,5 +1,6 @@
 package club.deltapvp.deltacore;
 
+import club.deltapvp.deltacore.api.DeltaAPI;
 import club.deltapvp.deltacore.api.DeltaPlugin;
 import club.deltapvp.deltacore.impl.api.DeltaAPIImpl;
 import club.deltapvp.deltacore.impl.api.DeltaSQLAPIImpl;
@@ -23,7 +24,6 @@ public final class DeltaCore extends DeltaPlugin {
         registerListeners(
                 new GUIListener()
         );
-
     }
 
     @Override
