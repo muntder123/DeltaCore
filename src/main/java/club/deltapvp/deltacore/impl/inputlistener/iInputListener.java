@@ -1,7 +1,7 @@
 package club.deltapvp.deltacore.impl.inputlistener;
 
 import club.deltapvp.deltacore.DeltaCore;
-import club.deltapvp.deltacore.api.utilities.InputListener;
+import club.deltapvp.deltacore.api.utilities.input.InputListener;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
@@ -16,18 +16,21 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.function.BiConsumer;
 
-public class InputListenerImpl extends InputListener implements Listener {
-
+public class iInputListener implements InputListener, Listener {
     private final Map<UUID, BiConsumer<Player, String>> listening = new HashMap<>();
 
-    public InputListenerImpl() {
+    public iInputListener() {
         Bukkit.getPluginManager().registerEvents(this, DeltaCore.getInstance());
-        setInstance(this);
     }
 
     @Override
     public void listen(UUID uuid, BiConsumer<Player, String> function) {
         listening.put(uuid, function);
+    }
+
+    @Override
+    public void listen(Player player, UUID uuid, BiConsumer<Player, String> function) {
+        listening.put(player.getUniqueId(), function);
     }
 
     private void handleInput(Cancellable event, Player player, String message) {
@@ -48,8 +51,6 @@ public class InputListenerImpl extends InputListener implements Listener {
     public void onPlayerQuit(PlayerQuitEvent event) {
         UUID uuid = event.getPlayer().getUniqueId();
         listening.remove(uuid);
-
-
     }
 
     @EventHandler

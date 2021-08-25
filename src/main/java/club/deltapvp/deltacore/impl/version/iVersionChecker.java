@@ -4,13 +4,11 @@ import club.deltapvp.deltacore.api.utilities.version.ServerVersion;
 import club.deltapvp.deltacore.api.utilities.version.VersionChecker;
 import org.bukkit.Bukkit;
 
-public class VersionCheckerImpl extends VersionChecker {
+public class iVersionChecker implements VersionChecker {
 
     private final ServerVersion serverVersion;
 
-    public VersionCheckerImpl() {
-        setInstance(this);
-
+    public iVersionChecker() {
         serverVersion = ServerVersion.fromServerPackageName(Bukkit.getServer().getClass().getName());
     }
 
