@@ -116,4 +116,29 @@ public class iMessage implements Message {
     public void broadcast() {
         Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', message));
     }
+
+    @Override
+    public String getMessage() {
+        return message;
+    }
+
+    @Override
+    public String getMessage(String... replacers) {
+        Set<Replacer<String, String>> replacerSet = new HashSet<>();
+        Replacer<String, String> replacer = new Replacer<>(null, null);
+        for (int i = 0; i < replacers.length; ++i) {
+            if (i % 2 == 0) {
+                replacer.setInput(replacers[i]);
+            } else {
+                replacer.setOutput(replacers[i]);
+                replacerSet.add(replacer);
+                replacer = new Replacer<>(null, null);
+            }
+        }
+
+        final String[] pendingMessage = {message};
+        replacerSet.stream().filter(r -> pendingMessage[0].contains(r.getInput()))
+                .forEach(r -> pendingMessage[0] = pendingMessage[0].replaceAll(r.getInput(), r.getOutput()));
+        return pendingMessage[0];
+    }
 }
