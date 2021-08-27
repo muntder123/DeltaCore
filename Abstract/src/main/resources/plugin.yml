@@ -1,0 +1,3 @@
+name: AbstractAPI
+version: ${project.version}
+main: club.deltapvp.core.abstractapi.AbstractAPI
