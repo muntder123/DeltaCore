@@ -9,6 +9,7 @@ import java.util.regex.Pattern;
 public class VersionHexValidator extends AbstractHexValidator {
 
     private final Pattern pattern;
+
     public VersionHexValidator() {
         setInstance(this);
 

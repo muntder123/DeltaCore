@@ -5,7 +5,6 @@ import club.deltapvp.deltacore.api.DeltaAPI;
 import club.deltapvp.deltacore.api.utilities.hex.HexValidator;
 import club.deltapvp.deltacore.api.utilities.message.Message;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 

@@ -11,6 +11,7 @@ import org.bukkit.Bukkit;
 public class iHexValidator implements HexValidator {
     private final boolean isHexVersion;
     private AbstractHexValidator abstractHexValidator;
+
     public iHexValidator() {
         isHexVersion = ServerVersion.fromServerPackageName(Bukkit.getServer().getClass().getName()).isAtLeast(ServerVersion.V1_16);
         if (isHexVersion)

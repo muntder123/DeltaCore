@@ -3,6 +3,7 @@ package club.deltapvp.core.impl.api;
 import club.deltapvp.core.impl.bungeecordutil.iBungeeCord;
 import club.deltapvp.core.impl.file.iFileLoader;
 import club.deltapvp.core.impl.hex.iHexValidator;
+import club.deltapvp.core.impl.hologram.IHologramManager;
 import club.deltapvp.core.impl.inputlistener.iInputListener;
 import club.deltapvp.core.impl.message.iMessage;
 import club.deltapvp.core.impl.serialize.iBukkitSerializer;
@@ -15,6 +16,7 @@ import club.deltapvp.deltacore.api.utilities.checker.UpdateChecker;
 import club.deltapvp.deltacore.api.utilities.file.FileLoader;
 import club.deltapvp.deltacore.api.utilities.file.VersionChecker;
 import club.deltapvp.deltacore.api.utilities.hex.HexValidator;
+import club.deltapvp.deltacore.api.utilities.hologram.HologramManager;
 import club.deltapvp.deltacore.api.utilities.input.InputListener;
 import club.deltapvp.deltacore.api.utilities.message.Message;
 import club.deltapvp.deltacore.api.utilities.serialization.BukkitSerializer;
@@ -32,6 +34,7 @@ public class DeltaAPIImpl extends DeltaAPI {
     private final FileLoader fileLoader;
     private final BukkitSerializer bukkitSerializer;
     private final HexValidator hexValidator;
+    private final HologramManager hologramManager;
 
     public DeltaAPIImpl() {
         setInstance(this);
@@ -44,6 +47,7 @@ public class DeltaAPIImpl extends DeltaAPI {
         fileLoader = new iFileLoader();
         bukkitSerializer = new iBukkitSerializer();
         hexValidator = new iHexValidator();
+        hologramManager = new IHologramManager();
     }
 
     @Override
@@ -99,5 +103,10 @@ public class DeltaAPIImpl extends DeltaAPI {
     @Override
     public HexValidator getHexValidator() {
         return hexValidator;
+    }
+
+    @Override
+    public HologramManager getHologramManager() {
+        return hologramManager;
     }
 }
