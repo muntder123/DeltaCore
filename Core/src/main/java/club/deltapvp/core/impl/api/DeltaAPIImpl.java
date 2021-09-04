@@ -7,6 +7,8 @@ import club.deltapvp.core.impl.hologram.IHologramManager;
 import club.deltapvp.core.impl.inputlistener.iInputListener;
 import club.deltapvp.core.impl.message.iMessage;
 import club.deltapvp.core.impl.serialize.iBukkitSerializer;
+import club.deltapvp.core.impl.sign.IVirtualSignEditor;
+import club.deltapvp.core.impl.skull.ICustomSkull;
 import club.deltapvp.core.impl.timeconverter.iTimeConverter;
 import club.deltapvp.core.impl.update.iUpdateChecker;
 import club.deltapvp.core.impl.version.iVersionChecker;
@@ -20,6 +22,8 @@ import club.deltapvp.deltacore.api.utilities.hologram.HologramManager;
 import club.deltapvp.deltacore.api.utilities.input.InputListener;
 import club.deltapvp.deltacore.api.utilities.message.Message;
 import club.deltapvp.deltacore.api.utilities.serialization.BukkitSerializer;
+import club.deltapvp.deltacore.api.utilities.sign.VirtualSignEditor;
+import club.deltapvp.deltacore.api.utilities.skull.CustomSkull;
 import club.deltapvp.deltacore.api.utilities.time.TimeConversion;
 
 import java.util.List;
@@ -35,6 +39,7 @@ public class DeltaAPIImpl extends DeltaAPI {
     private final BukkitSerializer bukkitSerializer;
     private final HexValidator hexValidator;
     private final HologramManager hologramManager;
+    private final VirtualSignEditor virtualSignEditor;
 
     public DeltaAPIImpl() {
         setInstance(this);
@@ -48,6 +53,7 @@ public class DeltaAPIImpl extends DeltaAPI {
         bukkitSerializer = new iBukkitSerializer();
         hexValidator = new iHexValidator();
         hologramManager = new IHologramManager();
+        virtualSignEditor = new IVirtualSignEditor();
     }
 
     @Override
@@ -108,5 +114,15 @@ public class DeltaAPIImpl extends DeltaAPI {
     @Override
     public HologramManager getHologramManager() {
         return hologramManager;
+    }
+
+    @Override
+    public CustomSkull createCustomSkull(String url) {
+        return new ICustomSkull(url);
+    }
+
+    @Override
+    public VirtualSignEditor getVirtualSignEditor() {
+        return virtualSignEditor;
     }
 }

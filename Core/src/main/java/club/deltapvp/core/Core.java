@@ -26,7 +26,6 @@ public final class Core extends DeltaPlugin {
                 new GUIListener(),
                 new HologramListener()
         );
-
     }
 
     @Override
@@ -35,4 +34,5 @@ public final class Core extends DeltaPlugin {
         DeltaAPI api = DeltaAPI.getInstance();
         api.getHologramManager().getHolograms().forEach(hologram -> api.getHologramManager().removeHologram(hologram));
     }
+
 }
