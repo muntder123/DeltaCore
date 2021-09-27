@@ -2,8 +2,8 @@ package club.deltapvp.core.impl.hex;
 
 import club.deltapvp.core.abstractapi.AbstractHexValidator;
 import club.deltapvp.core.version.v1_16.VersionHexValidator;
-import club.deltapvp.deltacore.api.utilities.file.enums.ServerVersion;
 import club.deltapvp.deltacore.api.utilities.hex.HexValidator;
+import club.deltapvp.deltacore.api.utilities.version.ServerVersion;
 import lombok.SneakyThrows;
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Bukkit;

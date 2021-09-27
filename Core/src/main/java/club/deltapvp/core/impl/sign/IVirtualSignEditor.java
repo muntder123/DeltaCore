@@ -4,10 +4,10 @@ import club.deltapvp.core.Core;
 import club.deltapvp.core.version.v1_16.SignMenuFactory1_16;
 import club.deltapvp.core.version.v1_8_8.SignMenuFactory1_8;
 import club.deltapvp.deltacore.api.DeltaAPI;
-import club.deltapvp.deltacore.api.utilities.file.VersionChecker;
 import club.deltapvp.deltacore.api.utilities.sign.AbstractSignFactory;
 import club.deltapvp.deltacore.api.utilities.sign.AbstractSignMenu;
 import club.deltapvp.deltacore.api.utilities.sign.VirtualSignEditor;
+import club.deltapvp.deltacore.api.utilities.version.VersionChecker;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 

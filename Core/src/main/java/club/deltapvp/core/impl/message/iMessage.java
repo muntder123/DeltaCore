@@ -3,7 +3,7 @@ package club.deltapvp.core.impl.message;
 import club.deltapvp.core.core.Replacer;
 import club.deltapvp.deltacore.api.DeltaAPI;
 import club.deltapvp.deltacore.api.utilities.hex.HexValidator;
-import club.deltapvp.deltacore.api.utilities.message.Message;
+import club.deltapvp.deltacore.api.utilities.message.iface.Message;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;

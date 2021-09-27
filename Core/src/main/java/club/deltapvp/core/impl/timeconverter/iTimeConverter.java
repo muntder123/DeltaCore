@@ -1,7 +1,7 @@
 package club.deltapvp.core.impl.timeconverter;
 
 import club.deltapvp.deltacore.api.DeltaAPI;
-import club.deltapvp.deltacore.api.utilities.message.Message;
+import club.deltapvp.deltacore.api.utilities.message.iface.Message;
 import club.deltapvp.deltacore.api.utilities.time.TimeConversion;
 
 public class iTimeConverter implements TimeConversion {

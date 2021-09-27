@@ -26,6 +26,7 @@ public final class Core extends DeltaPlugin {
                 new GUIListener(),
                 new HologramListener()
         );
+
     }
 
     @Override
