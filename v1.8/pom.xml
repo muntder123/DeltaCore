@@ -91,12 +91,20 @@
             <version>1.0-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
+        <!-- Production Branch -->
         <dependency>
             <groupId>com.github.Delta-Development</groupId>
             <artifactId>DeltaAPI</artifactId>
-            <version>1.1.6</version>
+            <version>1.1.7</version>
             <scope>provided</scope>
         </dependency>
+        <!-- Development Branch -->
+        <!--        <dependency>-->
+        <!--            <groupId>com.github.Delta-Development</groupId>-->
+        <!--            <artifactId>DeltaAPI</artifactId>-->
+        <!--            <version>4e13c9266e</version>-->
+        <!--            <scope>provided</scope>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>com.comphenix.protocol</groupId>
             <artifactId>ProtocolLib</artifactId>

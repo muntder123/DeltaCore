@@ -1,7 +1,9 @@
 package club.deltapvp.core;
 
 import club.deltapvp.core.impl.api.DeltaAPIImpl;
+import club.deltapvp.core.impl.api.DeltaItemBuilderAPI;
 import club.deltapvp.core.impl.api.DeltaSQLAPIImpl;
+import club.deltapvp.core.impl.event.CustomPlayerEventListener;
 import club.deltapvp.core.impl.gui.GUIListener;
 import club.deltapvp.core.impl.hologram.HologramListener;
 import club.deltapvp.deltacore.api.DeltaAPI;
@@ -22,11 +24,12 @@ public final class Core extends DeltaPlugin {
 
         new DeltaAPIImpl();
         new DeltaSQLAPIImpl();
+        new DeltaItemBuilderAPI();
         registerListeners(
                 new GUIListener(),
-                new HologramListener()
+                new HologramListener(),
+                new CustomPlayerEventListener()
         );
-
     }
 
     @Override

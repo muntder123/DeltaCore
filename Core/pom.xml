@@ -131,15 +131,15 @@
         <dependency>
             <groupId>com.github.Delta-Development</groupId>
             <artifactId>DeltaAPI</artifactId>
-            <version>1.1.6</version>
+            <version>1.1.7</version>
             <scope>compile</scope>
         </dependency>
         <!-- Development Branch -->
-        <!--        <dependency>-->
-        <!--            <groupId>com.github.Delta-Development</groupId>-->
-        <!--            <artifactId>DeltaAPI</artifactId>-->
-        <!--            <version>70e1483251</version>-->
-        <!--            <scope>compile</scope>-->
-        <!--        </dependency>-->
+        <!--                <dependency>-->
+        <!--                    <groupId>com.github.Delta-Development</groupId>-->
+        <!--                    <artifactId>DeltaAPI</artifactId>-->
+        <!--                    <version>fbf7192f9b</version>-->
+        <!--                    <scope>compile</scope>-->
+        <!--                </dependency>-->
     </dependencies>
 </project>
