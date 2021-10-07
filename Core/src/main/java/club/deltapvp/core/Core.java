@@ -30,6 +30,7 @@ public final class Core extends DeltaPlugin {
                 new HologramListener(),
                 new CustomPlayerEventListener()
         );
+
     }
 
     @Override

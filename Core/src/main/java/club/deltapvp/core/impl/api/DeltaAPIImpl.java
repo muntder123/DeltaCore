@@ -4,8 +4,10 @@ import club.deltapvp.core.impl.bungeecordutil.iBungeeCord;
 import club.deltapvp.core.impl.file.iFileLoader;
 import club.deltapvp.core.impl.hex.iHexValidator;
 import club.deltapvp.core.impl.hologram.IHologramManager;
+import club.deltapvp.core.impl.hologram.v2.HologramManagerImpl;
 import club.deltapvp.core.impl.inputlistener.iInputListener;
 import club.deltapvp.core.impl.message.iMessage;
+import club.deltapvp.core.impl.scoreboard.ScoreboardManagerImpl;
 import club.deltapvp.core.impl.serialize.iBukkitSerializer;
 import club.deltapvp.core.impl.sign.IVirtualSignEditor;
 import club.deltapvp.core.impl.skull.ICustomSkull;
@@ -54,6 +56,9 @@ public class DeltaAPIImpl extends DeltaAPI {
         hexValidator = new iHexValidator();
         hologramManager = new IHologramManager();
         virtualSignEditor = new IVirtualSignEditor();
+
+        new HologramManagerImpl();
+        new ScoreboardManagerImpl();
     }
 
     @Override

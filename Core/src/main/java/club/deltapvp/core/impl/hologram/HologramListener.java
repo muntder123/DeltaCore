@@ -84,4 +84,9 @@ public class HologramListener implements Listener {
 
         interactionFunction.accept(event.getPlayer(), event);
     }
+
+    @EventHandler
+    public void onHologramInteract(club.deltapvp.deltacore.api.utilities.hologram.v2.HologramInteractEvent event) {
+        event.getHologram().onHologramInteract(event);
+    }
 }
