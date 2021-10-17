@@ -101,7 +101,7 @@
         <dependency>
             <groupId>com.github.Delta-Development</groupId>
             <artifactId>DeltaAPI</artifactId>
-            <version>1.1.9</version>
+            <version>1.1.10</version>
             <scope>provided</scope>
         </dependency>
         <!-- Development Branch -->

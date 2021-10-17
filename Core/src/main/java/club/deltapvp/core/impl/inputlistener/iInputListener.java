@@ -28,11 +28,6 @@ public class iInputListener implements InputListener, Listener {
         listening.put(uuid, function);
     }
 
-    @Override
-    public void listen(Player player, UUID uuid, BiConsumer<Player, String> function) {
-        listening.put(player.getUniqueId(), function);
-    }
-
     private void handleInput(Cancellable event, Player player, String message) {
         UUID uuid = player.getUniqueId();
         if (listening.containsKey(uuid)) {
