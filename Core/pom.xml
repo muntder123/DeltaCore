@@ -128,18 +128,18 @@
             <scope>provided</scope>
         </dependency>
         <!-- Production Branch -->
-                <dependency>
-                    <groupId>com.github.Delta-Development</groupId>
-                    <artifactId>DeltaAPI</artifactId>
-                    <version>1.1.10</version>
-                    <scope>compile</scope>
-                </dependency>
+        <dependency>
+            <groupId>com.github.Delta-Development</groupId>
+            <artifactId>DeltaAPI</artifactId>
+            <version>1.1.11</version>
+            <scope>compile</scope>
+        </dependency>
         <!-- Development Branch -->
-<!--        <dependency>-->
-<!--            <groupId>com.github.Delta-Development</groupId>-->
-<!--            <artifactId>DeltaAPI</artifactId>-->
-<!--            <version>9fecce4ffa</version>-->
-<!--            <scope>compile</scope>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>com.github.Delta-Development</groupId>-->
+        <!--            <artifactId>DeltaAPI</artifactId>-->
+        <!--            <version>dfe6c47d6c</version>-->
+        <!--            <scope>compile</scope>-->
+        <!--        </dependency>-->
     </dependencies>
 </project>
