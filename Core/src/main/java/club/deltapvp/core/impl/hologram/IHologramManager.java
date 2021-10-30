@@ -87,7 +87,8 @@ public class IHologramManager implements HologramManager {
             if (hologram.getLocation().equals(location))
                 return true;
 
-            ArmorStand as = hologram.getEntities().stream().filter(armorStand -> armorStand.getLocation().equals(location)).findFirst().orElse(null);
+            ArmorStand as = hologram.getEntities().stream().filter(armorStand -> armorStand.getLocation().equals(location))
+                    .findFirst().orElse(null);
             return as != null;
         }).findFirst().orElse(null);
     }

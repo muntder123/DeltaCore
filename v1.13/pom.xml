@@ -4,11 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>DeltaCore</artifactId>
+    <groupId>club.deltapvp.core.version</groupId>
+    <artifactId>v1_13_2</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>DeltaCore</name>
+    <name>V1_13_2</name>
 
     <properties>
         <java.version>1.8</java.version>
@@ -21,6 +22,7 @@
         <version>1.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
+
 
     <build>
         <plugins>
@@ -81,13 +83,39 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.8.8-R0.1-SNAPSHOT</version>
+            <version>1.13.2-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot</artifactId>
-            <version>1.8.8-R0.1-SNAPSHOT</version>
+            <version>1.13.2-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>club.deltapvp.core</groupId>
+            <artifactId>AbstractAPI</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- Production Branch -->
+        <dependency>
+            <groupId>com.github.Delta-Development</groupId>
+            <artifactId>DeltaAPI</artifactId>
+            <version>1.1.11</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- Development Branch -->
+        <!--        <dependency>-->
+        <!--            <groupId>com.github.Delta-Development</groupId>-->
+        <!--            <artifactId>DeltaAPI</artifactId>-->
+        <!--            <version>f22609af05</version>-->
+        <!--            <scope>provided</scope>-->
+        <!--        </dependency>-->
+        <dependency>
+            <groupId>com.comphenix.protocol</groupId>
+            <artifactId>ProtocolLib</artifactId>
+            <version>4.7.0</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -96,55 +124,5 @@
             <version>1.18.20</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>club.deltapvp.core</groupId>
-            <artifactId>AbstractAPI</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>club.deltapvp.core.version</groupId>
-            <artifactId>v1_16</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>club.deltapvp.core.version</groupId>
-            <artifactId>v1_8_8</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>club.deltapvp.core.version</groupId>
-            <artifactId>v1_13_2</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
-        <dependency>
-            <groupId>commons-codec</groupId>
-            <artifactId>commons-codec</artifactId>
-            <version>1.15</version>
-        </dependency>
-        <dependency>
-            <groupId>com.comphenix.protocol</groupId>
-            <artifactId>ProtocolLib</artifactId>
-            <version>4.7.0</version>
-            <scope>provided</scope>
-        </dependency>
-        <!-- Production Branch -->
-        <dependency>
-            <groupId>com.github.Delta-Development</groupId>
-            <artifactId>DeltaAPI</artifactId>
-            <version>1.1.11</version>
-            <scope>compile</scope>
-        </dependency>
-        <!-- Development Branch -->
-        <!--        <dependency>-->
-        <!--            <groupId>com.github.Delta-Development</groupId>-->
-        <!--            <artifactId>DeltaAPI</artifactId>-->
-        <!--            <version>dfe6c47d6c</version>-->
-        <!--            <scope>compile</scope>-->
-        <!--        </dependency>-->
     </dependencies>
 </project>

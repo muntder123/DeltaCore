@@ -18,6 +18,7 @@
         <module>Core</module>
         <module>Abstract</module>
         <module>v1.8</module>
+        <module>v1.13</module>
         <module>v1.16</module>
     </modules>
 

@@ -1,13 +1,13 @@
 package club.deltapvp.core.impl.sign;
 
 import club.deltapvp.core.Core;
+import club.deltapvp.core.version.v1_13_2.SignMenuFactory1_13;
 import club.deltapvp.core.version.v1_16.SignMenuFactory1_16;
 import club.deltapvp.core.version.v1_8_8.SignMenuFactory1_8;
-import club.deltapvp.deltacore.api.DeltaAPI;
 import club.deltapvp.deltacore.api.utilities.sign.AbstractSignFactory;
 import club.deltapvp.deltacore.api.utilities.sign.AbstractSignMenu;
 import club.deltapvp.deltacore.api.utilities.sign.VirtualSignEditor;
-import club.deltapvp.deltacore.api.utilities.version.VersionChecker;
+import club.deltapvp.deltacore.api.utilities.version.ServerVersion;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
@@ -22,13 +22,14 @@ public class IVirtualSignEditor implements VirtualSignEditor {
         if (!Bukkit.getPluginManager().isPluginEnabled("ProtocolLib"))
             return;
 
-        VersionChecker versionChecker = DeltaAPI.getInstance().getVersionChecker();
-        boolean modern = versionChecker.isModern();
+        ServerVersion version = ServerVersion.fromServerPackageName(Bukkit.getServer().getClass().getName());
         Core plugin = Core.getInstance();
-        if (modern)
-            signFactory = new SignMenuFactory1_16(plugin);
-        else
+        if (version.equals(ServerVersion.V1_8))
             signFactory = new SignMenuFactory1_8(plugin);
+        if (version.equals(ServerVersion.V1_13))
+            signFactory = new SignMenuFactory1_13(plugin);
+        else
+            signFactory = new SignMenuFactory1_16(plugin);
     }
 
 

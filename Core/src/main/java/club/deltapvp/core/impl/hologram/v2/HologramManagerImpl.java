@@ -1,6 +1,7 @@
 package club.deltapvp.core.impl.hologram.v2;
 
 import club.deltapvp.core.Core;
+import club.deltapvp.core.version.v1_13_2.hologram.HologramHandler1_13;
 import club.deltapvp.core.version.v1_16.hologram.HologramHandler1_16;
 import club.deltapvp.core.version.v1_8_8.hologram.HologramHandler1_8;
 import club.deltapvp.deltacore.api.DeltaPlugin;
@@ -25,6 +26,8 @@ public class HologramManagerImpl extends HologramManager {
         Core plugin = Core.getInstance();
         if (version.equals(ServerVersion.V1_8))
             handler = new HologramHandler1_8(plugin);
+        if (version.equals(ServerVersion.V1_13))
+            handler = new HologramHandler1_13(plugin);
         if (version.equals(ServerVersion.V1_16))
             handler = new HologramHandler1_16(plugin);
 
