@@ -73,7 +73,7 @@ public enum Skull {
         propertyMap.put("textures", new Property("textures", new String(encodedData)));
         ItemStack head;
         if (DeltaAPI.getInstance().getVersionChecker().isModern())
-            head = new ItemStack(Material.valueOf("PLAYER_HEAD"));
+            head = new ItemStack(Material.valueOf("LEGACY_PLAYER_HEAD"));
         else
             head = new ItemStack(Material.SKULL_ITEM, 1, (short) 3);
 
