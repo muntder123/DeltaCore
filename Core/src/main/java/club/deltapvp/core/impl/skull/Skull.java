@@ -75,7 +75,7 @@ public enum Skull {
         if (DeltaAPI.getInstance().getVersionChecker().isModern())
             head = new ItemStack(Material.valueOf("LEGACY_PLAYER_HEAD"));
         else
-            head = new ItemStack(Material.SKULL_ITEM, 1, (short) 3);
+            head = new ItemStack(Material.LEGACY_PLAYER_HEAD, 1, (short) 3);
 
         ItemMeta headMeta = head.getItemMeta();
         Class<?> headMetaClass = headMeta.getClass();
@@ -93,7 +93,7 @@ public enum Skull {
     public static ItemStack getPlayerSkull(String name) {
         ItemStack itemStack;
         if (DeltaAPI.getInstance().getVersionChecker().isModern())
-            itemStack = new ItemStack(Material.valueOf("PLAYER_HEAD"), 1);
+            itemStack = new ItemStack(Material.valueOf("LEGACY_PLAYER_HEAD"), 1);
         else
             itemStack = new ItemStack(Material.SKULL_ITEM, 1, (short) 3);
 
@@ -120,7 +120,7 @@ public enum Skull {
     public ItemStack getSkull() {
         ItemStack itemStack;
         if (DeltaAPI.getInstance().getVersionChecker().isModern())
-            itemStack = new ItemStack(Material.valueOf("PLAYER_HEAD"), 1);
+            itemStack = new ItemStack(Material.valueOf("LEGACY_PLAYER_HEAD"), 1);
         else
             itemStack = new ItemStack(Material.SKULL_ITEM, 1, (short) 3);
 
